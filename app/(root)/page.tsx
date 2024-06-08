@@ -1,4 +1,5 @@
 import HeaderBox from "@/components/HeaderBox";
+import RightSidebar from "@/components/RightSidebar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 import Image from "next/image";
 
@@ -22,6 +23,11 @@ export default function Home() {
           />
         </header>
       </div>
+      <RightSidebar
+        user={loggedIn}
+        transactions={account?.transactions}
+        banks={accountsData?.slice(0, 2)}
+      />{" "}
     </section>
   );
 }
